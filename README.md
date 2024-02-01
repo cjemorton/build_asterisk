@@ -11,7 +11,7 @@ It was written for use on a Rocky 8 system, so the tooling and directory's may b
 ```snapshot
 curl -sSL https://raw.githubusercontent.com/cjemorton/build_asterisk/master/snapshot.sh | bash
 ```
-- List all containers
+- List all containers: (Run: ```lxc ls``` to get <container_name>)
 ```list
 curl -sSL https://raw.githubusercontent.com/cjemorton/build_asterisk/master/snapshot.sh | bash -s -- <container_name> -l
 ```
