@@ -1,4 +1,7 @@
 *WORK IN PROGRESS: USE IF YOU WANT*
+- This project is evolving as I work through setting everything up.
+
+- The goal is to create a reproducable environment, before I take snapshots and backup. Basically the instructions on how to set things up in the first place, if I had to start from scratch. That way the scripts basically document everything as I go along with version history.
 
 This repository is a set of script to help setup and build asterisk in a lxc container.
 
