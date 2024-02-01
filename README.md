@@ -15,3 +15,9 @@ curl -sSL https://raw.githubusercontent.com/cjemorton/build_asterisk/master/snap
 ```list
 curl -sSL https://raw.githubusercontent.com/cjemorton/build_asterisk/master/snapshot.sh | bash -s -- <container_name> -l
 ```
+
+# Useful URL's and resources.
+- Download directory for asterisk.
+```asterisk
+http://downloads.asterisk.org/pub/telephony/asterisk/
+```
