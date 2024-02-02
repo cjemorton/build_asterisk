@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 run_make() {
     local container_name=$1
     local directory='/usr/src/asterisk'
