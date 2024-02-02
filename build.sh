@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 run_make() {
     local container_name=$1
     local directory='/usr/src/asterisk'
@@ -15,8 +15,7 @@ configure_asterisk() {
 
     echo "Asterisk Version: $asterisk_version"
 
-    lxc exec $container_name -- /bin/bash -c "cd $source/$asterisk_version && ./configure"
-
+    lxc exec $container_name -- /bin/bash -c "cd $directory/$asterisk_version && ./configure"
 }
 run_make_menuconfig() {
     local container_name=$1
@@ -349,7 +348,7 @@ else
     check_and_install_epel_release "$container_name"
     check_and_enable_powertools "$container_name"
     run_dnf_update "$container_name"
-     check_and_install_svn "$container_name"
+    check_and_install_svn "$container_name"
     check_compiler_in_container "$container_name"
     check_gcc_cpp "$container_name"
     check_gnu_make "$container_name"
