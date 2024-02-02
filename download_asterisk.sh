@@ -53,6 +53,7 @@ install_required_tools() {
     echo "Checking and installing required tools in the container..."
 
     # Check and install md5sum, sha1sum, sha256sum, and gpg using dnf
+    lxc exec "$container_name" -- dnf -y update
     lxc exec "$container_name" -- dnf -y install coreutils gpg
 
     echo "Required tools installed successfully."
@@ -132,6 +133,7 @@ if [ "$download_flag" = true ]; then
         echo "Error: Container name not provided. Use the -c flag to specify the container."
         exit 1
     fi
+    install_required_tools "$container_name"
     download_files "$container_name"
 fi
 
